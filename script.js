@@ -34,6 +34,14 @@ document.getElementById('gradeForm').addEventListener('submit', function (e) {
     displayResult(studentName, weightedAverage, letterGrade);
 });
 
+// Reset button functionality
+document.getElementById('resetBtn').addEventListener('click', function () {
+    document.getElementById('gradeForm').reset();
+    const resultDiv = document.getElementById('result');
+    resultDiv.classList.add('hidden');
+    resultDiv.innerHTML = '';
+});
+
 /**
  * Returns the letter grade based on the numeric average.
  * @param {number} average - The weighted average score.
